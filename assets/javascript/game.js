@@ -27,4 +27,70 @@ $(document).ready(function(){
         $('#finalTotal').text(totalScore);
     }
 
+    function winner(){
+        alert("You Won!");
+        wins++;
+        $('#numberWins').text(wins);
+        reset();
+    }
+
+    function loser(){
+        alert ("You Lost!");
+        losses++;
+        $('#numberLosses').text(losses);
+        reset();
+    }
+
+    $('#one').on ('click', function(){
+        totalScore = totalScore + num1;
+        console.log("New totalScore= " + totalScore);
+        $('#finalTotal').text(totalScore);
+
+            if (totalScore == Random){
+                winner();
+            }
+            else if (totalScore > Random){
+                loser();
+            }
+    });
+
+    $('#two').on ('click', function(){
+        totalScore = totalScore + num2;
+        console.log("New totalScore= " + totalScore);
+        $('#finalTotal').text(totalScore);
+
+            if (totalScore == Random){
+                winner();
+            }
+            else if (totalScore > Random){
+                loser();
+            }
+    });
+
+    $('#three').on ('click', function(){
+        totalScore = totalScore + num3;
+        console.log("New totalScore= " + totalScore);
+        $('#finalTotal').text(totalScore);
+
+            if (totalScore == Random){
+                winner();
+            }
+            else if (totalScore > Random){
+                loser();
+            }
+    });
+
+    $('#four').on ('click', function(){
+        totalScore = totalScore + num4;
+        console.log("New totalScore= " + totalScore);
+        $('#finalTotal').text(totalScore);
+
+            if (totalScore == Random){
+                winner();
+            }
+            else if (totalScore > Random){
+                loser();
+            }
+    });
+
 });
